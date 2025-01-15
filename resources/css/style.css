@@ -1,0 +1,234 @@
+
+/* html,
+body {
+    height: 100%;
+} */
+
+body {
+    background-color: rgb(68, 140, 234);
+    margin: 0; /* THIS finally got rid of the margin around everything */;
+    font-family: Verdana;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /*This removes the blue color and lets the parent control the color */
+}
+
+nav {
+    background-color: rgb(68, 140, 234);
+    color: rgba(255, 255, 255, 0.9);
+    display: flex; /* This must be flex and not inline-flex, because inline-flex doesn't take up the whole width of the page. */
+    margin-right: 15px;
+    height: 50px;
+    /* justify-content: flex-end; */
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 30px;
+    /* flex-direction: column; */
+    /* width: 100%; */
+    
+}
+
+/* nav ul { */
+    /* list-style-type: none; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* display: flex-end; */
+    /* column-gap: 30px; */
+/* } */
+
+/* nav li { */
+    /* display: inline-flex; */
+    
+    /* justify-content: flex-end; */
+    /* column-gap: 30px; */
+    /* width: 200px; */
+    /* padding: 0px 10px; */
+    
+/* } */
+
+
+
+.Banner {
+    background-image: url("../images/scubacave.jpg");
+    background-size: cover;
+    background-position: center; /*this makes the cropping move to the center of the image*/
+    height: 500px;
+    display: flex;
+    align-items: center; /*This must be on the container. Doesn't work if it's only on the item.*/
+    justify-content: center;
+
+}
+
+.Banner h1 {
+    color: rgb(255, 255, 255);
+    background-color: rgba(255 255 255 / 20%);
+    height: 10rem;
+
+    text-align: center;
+    font-size: 5rem;
+    font-family: "Verdana", sans-serif;
+    /* -webkit-text-stroke: .5px rgb(20, 93, 0); */
+    text-shadow: 1px 1px 1px black;
+    justify-content: center;
+    align-items: center;
+    display:flex; /* This must also be a flex container for the text to be treated as an item that can be centered */
+    width: 100%;
+
+    
+}
+/* "Meet up..." */
+.Summary {
+    /* background-color: white; */
+    color: rgb(255, 255, 255);
+    background-color: rgba(68, 140, 234, .9);
+    padding-left: 15px;
+    padding-top: 1px; /*I don't understand why it uses way more than 1px */
+    padding-bottom: 1px;
+}
+
+.Summary a {
+    text-decoration: underline;
+}
+
+.EachPhoto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.EachPhoto img {
+    width: 100%;  /* Without this, all images will be gigantic at full size */
+    height: 100%; /* This will actually stretch any of the photos that aren't the same size */
+}
+
+.Testimonial {
+    color: rgb(44, 43, 41);
+    padding: 15px;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+.Testimonial h3 {
+    font-size: .75rem;
+}
+
+.Photos2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    /* margin-top: 15px; */
+}
+
+.Photos2 img {
+    width: 100%;  
+    height: 100%;  
+}
+
+.Tag {
+    color: rgb(255, 153, 0);
+    text-align: center;
+}
+
+.LastPhoto img {
+    display: block;
+    width: 50%;
+    margin: auto; /* This actually CENTERS the photo */
+
+}
+
+
+footer {
+    margin-left: 15px;
+    margin-bottom: 15px;
+
+}
+
+footer p {
+    font-size: .6rem; /*This has to be here or it doesn't work */
+}
+
+
+@media only screen and (max-width:640px) {
+    .EachPhoto, .Photos2 {
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .EachPhoto img {
+        padding-top: 15px;
+    }
+
+    .Photos2 img {
+        padding-top: 15px;
+    }
+
+    .LastPhoto img {
+        width: 100%;
+
+    }
+}
+
+@media only screen and (max-width:390px) {
+    nav {
+        font-size: 60%;
+        /* justify-content: space-between; */
+        /* padding: none; */
+        /* text-align: center; */
+        /* display: inline-block;  to get rid of flex and flex-end */
+        /* justify-content: center; */
+        /* margin: auto; */
+        /* display: flex; */
+        /* justify-content: space-between; */
+        
+        /* width: 100%; */
+        justify-content: space-around;
+        height: 30px;
+
+   
+
+    }
+
+    /* nav ul { */
+        /* list-style-type: circle; */
+        /* padding: 0;  For the record, "padding: none" is invalid code. */
+ 
+
+        /* display: flex; */
+        /* justify-content: space-between; */
+        
+    /* } */
+
+    /* nav li { */
+        
+
+        /* margin: auto; */
+    /* } */
+
+
+
+    .Banner {
+        height: 300px;
+    }
+    
+    .Banner h1 {
+        font-size: 2rem;
+    }
+
+    .Summary, .Testimonial, .Tag {
+        font-size: 75%;
+    }
+
+
+
+}
