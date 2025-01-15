@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/style.css">
+    <title>The Scuba Club</title>
+</head>
+<body>
+    
+    <!-- <nav>
+        <ul>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Discounted Gear</a></li>
+            <li><a href="#">Sign Up</a></li>
+        </ul>
+    </nav> -->
+
+    <!-- Using DIVS instead of UL and LIs fixed my issues of having trouble with flex for the smaller screen. -->
+    <nav>
+        <!-- <ul> -->
+            <div><a href="#">Events</a></div>
+            <div><a href="#">Discounted Gear</a></div>
+            <div><a href="#">Sign Up</a></div>
+        <!-- </ul> -->
+    </nav>
+
+
+    <div class="Banner">
+        <h1>The Scuba Club</h1>
+    </div>
+
+    <div class="Summary">
+        <h2>Meet up. Dive. Celebrate.</h2>
+        <h3>Come swim with us in Santa Monica on Saturdays! We see something new and exciting every time. Sponsored by <a href="#">PADI</a>.</h3>
+    </div>
+
+    <div class="Photos"> 
+        <!-- Tt was NOT necessary to have the Photos class AND the EachPhoto class. See Photos2 below.-->
+        <div class="EachPhoto">
+            <!-- Important to note that each image must have its own div to work with Grid. Though it doesn't require a class. -->
+            <div><img src="./resources/images/diversmile.jpg"></div>
+            <div><img src="./resources/images/clownfish.jpg"></div>
+            <div><img src="./resources/images/shark.jpg"></div>
+        </div>
+    </div>
+
+    <div class="Testimonial">
+        <h2>“I plan my weekend around their events. I can get a workout with my friends and see cool stuff!” </h2>
+        <h3>–Galinda. – Diver since 2015</h3>
+    </div>
+
+    <div class="Photos2">
+        <div><img src="./resources/images/purple.jpg"></div>
+        <div><img src="./resources/images/turtle.jpg"></div>
+        <div><img src="./resources/images/photographer.jpg"></div>
+    </div>
+
+    <div class="Tag">
+        <h2>Come join the fun!</h2>
+    </div>
+
+    <div class="LastPhoto">
+        <img src="./resources/images/hangloose.jpg">
+    </div>
+
+    <footer>
+        <p>&copy 2025 - The Scuba Club</p>
+    </footer>
+
+
+
+</body>
+</html>
